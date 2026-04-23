@@ -1,172 +1,107 @@
-<!-- ESTACIÓN ERRANTE — Archivo de emisiones en Kick -->
-<!-- Pegar este código en un bloque de código de Squarespace (página Estación Errante) -->
+<!-- ESTACIÓN ERRANTE — Archivo de emisiones -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 
 <style>
-.archivo-vivo {
+.ee {
   font-family: 'Instrument Serif', 'Times New Roman', Georgia, serif;
   max-width: 720px;
   margin: 0 auto;
   padding: 60px 24px;
-  color: #111;
+  background: transparent;
 }
-.av-cabecera {
+.ee-titulo {
   text-align: center;
-  margin-bottom: 72px;
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 48px;
-}
-.av-nombre {
-  font-size: 13px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: #888;
-  margin-bottom: 16px;
-}
-.av-titulo-principal {
-  font-size: 38px;
+  font-size: 32px;
   font-weight: 400;
-  line-height: 1.2;
-  margin-bottom: 12px;
-  letter-spacing: -0.3px;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+  margin-bottom: 48px;
 }
-.av-descripcion {
-  font-size: 15px;
-  color: #666;
-  font-style: italic;
-  margin-bottom: 20px;
+.ee-entrada {
+  padding: 36px 0;
+  border-bottom: 1px solid rgba(245,198,208,0.15);
 }
-.av-contador {
-  font-size: 12px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: #bbb;
-}
-.av-entrada {
-  padding: 48px 0;
-  border-bottom: 1px solid #eee;
-}
-.av-entrada:last-of-type {
+.ee-entrada:last-of-type {
   border-bottom: none;
 }
-.av-meta {
+.ee-meta {
   display: flex;
   align-items: center;
   gap: 16px;
   margin-bottom: 20px;
 }
-.av-numero {
-  font-size: 11px;
+.ee-numero {
+  font-size: 12px;
   letter-spacing: 2px;
-  color: #ccc;
-  text-transform: uppercase;
+  color: rgba(255,255,255,0.7);
 }
-.av-fecha {
-  font-size: 13px;
-  color: #999;
+.ee-fecha {
+  font-size: 14px;
+  color: rgba(255,255,255,0.6);
   letter-spacing: 0.5px;
 }
-.av-titulo-dia {
-  font-size: 26px;
-  font-weight: 400;
-  font-style: italic;
-  line-height: 1.3;
-  margin: 0 0 20px 0;
-  color: #111;
-}
-.av-fragmento {
-  font-size: 17px;
-  line-height: 1.75;
-  color: #333;
-  margin: 0 0 24px 0;
-}
-.av-pdf {
-  display: inline-block;
-  font-size: 13px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: #111;
-  text-decoration: none;
-  border-bottom: 1px solid #111;
-  padding-bottom: 1px;
-  margin-bottom: 28px;
-}
-.av-pdf:hover {
-  color: #555;
-  border-color: #555;
-}
-.av-video {
-  margin-top: 28px;
+.ee-video {
   width: 100%;
   aspect-ratio: 16/9;
+  margin-top: 8px;
 }
-.av-video iframe {
+.ee-video iframe {
   width: 100%;
   height: 100%;
+  border: none;
+  border-radius: 6px;
   background: #111;
 }
-.av-video-link {
-  display: block;
-  text-align: center;
+.ee-video-pending {
+  width: 100%;
+  aspect-ratio: 16/9;
   margin-top: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(245,198,208,0.12);
+  border-radius: 6px;
+  background: rgba(255,255,255,0.02);
+}
+.ee-video-pending span {
   font-size: 13px;
-  color: #888;
-  text-decoration: none;
-  letter-spacing: 0.3px;
+  color: rgba(255,255,255,0.4);
+  letter-spacing: 1px;
+  font-style: italic;
 }
-.av-video-link:hover {
-  color: #555;
-}
-.av-pie {
+.ee-pie {
   text-align: center;
-  margin-top: 72px;
-  padding-top: 48px;
-  border-top: 1px solid #eee;
+  margin-top: 48px;
+  padding-top: 36px;
+  border-top: 1px solid rgba(245,198,208,0.1);
 }
-.av-pie p {
-  font-size: 14px;
-  color: #aaa;
-  line-height: 1.8;
+.ee-pie p {
+  font-size: 13px;
+  color: rgba(255,255,255,0.3);
   font-style: italic;
 }
-.av-pie a {
-  color: #aaa;
+.ee-pie a {
+  color: rgba(255,255,255,0.7);
   text-decoration: none;
-  border-bottom: 1px solid #ddd;
-}
-.av-eje {
-  font-size: 15px;
-  color: #666;
-  margin-top: 24px;
-  font-style: italic;
 }
 </style>
 
-<div class="archivo-vivo">
-  <header class="av-cabecera">
-    <div class="av-nombre">Aonekken María</div>
-    <h1 class="av-titulo-principal">Estación Errante</h1>
-    <p class="av-descripcion">Performance diaria. Astrología, noticias de I.A., filosofía planetaria. En vivo cada mañana en Kick.</p>
-    <p class="av-contador">17 emisiones desde el 1 de abril de 2026</p>
-  </header>
+<div class="ee">
+  <h1 class="ee-titulo">Correr</h1>
 
-    <article class="av-entrada">
-      <div class="av-meta">
-        <span class="av-numero">#17</span>
-        <span class="av-fecha">Miércoles 23 de Abril de 2026</span>
+    <article class="ee-entrada">
+      <div class="ee-meta">
+        <span class="ee-numero">#17</span>
+        <span class="ee-fecha">Jueves 23 de Abril de 2026</span>
       </div>
-      <h2 class="av-titulo-dia">La bomba, el búnker y la pregunta maternal</h2>
-      <p class="av-fragmento">Altman acusa a Anthropic de vender miedo mientras Dario advierte sobre desempleo masivo. Plutón conjunción exacta a tu Ascendente mientras la guerra entre labs explota públicamente. La pregunta no es si la I.A. cambia todo, sino si podemos crear inteligencia artificial que amplifique lo humano en lugar de suplantarlo.</p>
-      <a href="pdfs/informe_anouk_20260423.pdf" class="av-pdf" target="_blank">Leer informe completo →</a>
-
+      <div class="ee-video">
+        <iframe src="https://archive.org/embed/aonekken-maria-experiencia-total-20260423?poster=https://archive.org/services/img/aonekken-maria-experiencia-total-20260423"
+                allowfullscreen allow="fullscreen"></iframe>
+      </div>
     </article>
-  <footer class="av-pie">
-    <p>Performance diaria de Anouk + Claude.<br>
-    Astrolog&iacute;a, noticias de I.A., filosof&iacute;a planetaria.<br>
-    En vivo cada ma&ntilde;ana en
-    <a href="https://kick.com/estacionerrante">Kick</a>.</p>
-    <p class="av-eje">El eje Leo&ndash;Acuario en movimiento.<br>De lo personal a lo universal.</p>
+  <footer class="ee-pie">
+    <p>En vivo cada ma&ntilde;ana en <a href="https://kick.com/estacionerrante" target="_blank">Kick</a></p>
   </footer>
 </div>
