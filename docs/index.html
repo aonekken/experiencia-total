@@ -137,3 +137,22 @@
     <p>En vivo cada ma&ntilde;ana en <a href="https://kick.com/estacionerrante" target="_blank">Kick</a></p>
   </footer>
 </div>
+
+<script>
+(function() {
+  function sendHeight() {
+    var h = Math.max(
+      document.body.scrollHeight,
+      document.body.offsetHeight,
+      document.documentElement.scrollHeight,
+      document.documentElement.offsetHeight
+    );
+    if (h > 100) {
+      window.parent.postMessage({ type: 'ee-resize', height: h + 40 }, '*');
+    }
+  }
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+  setInterval(sendHeight, 1000);
+})();
+</script>
