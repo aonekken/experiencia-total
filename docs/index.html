@@ -102,6 +102,37 @@
   letter-spacing: 1px;
   font-style: italic;
 }
+.ee-ver-mas-wrap {
+  text-align: center;
+  padding: 36px 0;
+}
+.ee-ver-mas {
+  font-family: 'Instrument Serif', 'Times New Roman', Georgia, serif;
+  font-size: 15px;
+  color: rgba(245,198,208,0.7);
+  background: transparent;
+  border: 1px solid rgba(245,198,208,0.25);
+  border-radius: 24px;
+  padding: 12px 32px;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+.ee-ver-mas:hover {
+  color: rgba(245,198,208,1);
+  border-color: rgba(245,198,208,0.5);
+  background: rgba(245,198,208,0.05);
+}
+.ee-ocultas {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.8s ease, opacity 0.6s ease;
+}
+.ee-ocultas.ee-visible {
+  max-height: 50000px;
+  opacity: 1;
+}
 .ee-pie {
   text-align: center;
   margin-top: 48px;
@@ -162,6 +193,13 @@
                 allowfullscreen allow="fullscreen"></iframe>
       </div>
     </article>
+    <div class="ee-ver-mas-wrap">
+      <button class="ee-ver-mas" onclick="document.querySelector('.ee-ocultas').classList.add('ee-visible');this.parentElement.style.display='none';setTimeout(function(){var f=document.querySelector('.ee-ocultas iframe');if(f)f.scrollIntoView({behavior:'smooth',block:'nearest'})},100);">
+        Ver 8 emisiones anteriores
+      </button>
+    </div>
+    <div class="ee-ocultas">
+
     <article class="ee-entrada">
       <div class="ee-meta">
         <span class="ee-numero">#8</span>
@@ -266,6 +304,7 @@
                 allowfullscreen allow="fullscreen"></iframe>
       </div>
     </article>
+    </div>
   <div style="margin-top: 72px;">
     <h1 class="ee-titulo">ANUXIA Records</h1>
     <p class="ee-sub">Just Chatting &middot; En vivo en Kick</p>
